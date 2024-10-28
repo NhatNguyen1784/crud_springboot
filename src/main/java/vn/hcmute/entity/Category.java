@@ -18,11 +18,13 @@ public class Category implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long categoryId;
+    private Long categoryid;
     @Column(name = "category_name", length = 200, columnDefinition = "nvarchar(200) not null")
-    private String categoryName;
-
-    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
-    private Set<Product> products;
+    private String categoryname;
+    @Column(name = "category_image")
+    private String image;
+//
+//    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
+//    private Set<Product> products;
 
 }

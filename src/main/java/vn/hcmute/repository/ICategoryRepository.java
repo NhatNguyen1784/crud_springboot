@@ -8,7 +8,5 @@ import vn.hcmute.entity.Category;
 import java.util.Optional;
 
 public interface ICategoryRepository extends JpaRepository<Category, Long> {
-    Optional<Category> findByName(String name);
 
-    Page<Category> findByNameContaining(String name, Pageable pageable);
 }
