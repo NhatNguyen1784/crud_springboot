@@ -45,4 +45,9 @@ public class CategoryServiceImpl implements vn.hcmute.service.ICategoryService {
     public <S extends Category> S save(S entity) {
         return categoryRepository.save(entity);
     }
+
+    @Override
+    public Optional<Category> findById(Long aLong) {
+        return categoryRepository.findById(aLong);
+    }
 }
